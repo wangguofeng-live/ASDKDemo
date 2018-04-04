@@ -14,6 +14,9 @@
 		CDA50970206E45060062160C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA5096F206E45060062160C /* Assets.xcassets */; };
 		CDA50973206E45060062160C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA50971206E45060062160C /* LaunchScreen.storyboard */; };
 		CDA50976206E45060062160C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA50975206E45060062160C /* main.m */; };
+		CDADEC6B2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADEC6A2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m */; };
+		CDADEC6F2074CD4E00C56AF3 /* ImageCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADEC6E2074CD4E00C56AF3 /* ImageCellNode.m */; };
+		CDADEC722074D19300C56AF3 /* TextCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADEC712074D19300C56AF3 /* TextCellNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		CDA50972206E45060062160C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDA50974206E45060062160C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDA50975206E45060062160C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDADEC692074C9FD00C56AF3 /* ASTableNodeDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASTableNodeDemoViewController.h; sourceTree = "<group>"; };
+		CDADEC6A2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASTableNodeDemoViewController.m; sourceTree = "<group>"; };
+		CDADEC6D2074CD4E00C56AF3 /* ImageCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCellNode.h; sourceTree = "<group>"; };
+		CDADEC6E2074CD4E00C56AF3 /* ImageCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCellNode.m; sourceTree = "<group>"; };
+		CDADEC702074D19300C56AF3 /* TextCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCellNode.h; sourceTree = "<group>"; };
+		CDADEC712074D19300C56AF3 /* TextCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCellNode.m; sourceTree = "<group>"; };
 		D94883D806923F720D754323 /* Pods-ASDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKDemo/Pods-ASDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,10 +83,13 @@
 		CDA50965206E45060062160C /* ASDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CDADEC6C2074CD0200C56AF3 /* Cell */,
 				CDA50966206E45060062160C /* AppDelegate.h */,
 				CDA50967206E45060062160C /* AppDelegate.m */,
 				CDA50969206E45060062160C /* ViewController.h */,
 				CDA5096A206E45060062160C /* ViewController.m */,
+				CDADEC692074C9FD00C56AF3 /* ASTableNodeDemoViewController.h */,
+				CDADEC6A2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m */,
 				CDA5096C206E45060062160C /* Main.storyboard */,
 				CDA5096F206E45060062160C /* Assets.xcassets */,
 				CDA50971206E45060062160C /* LaunchScreen.storyboard */,
@@ -85,6 +97,17 @@
 				CDA50975206E45060062160C /* main.m */,
 			);
 			path = ASDKDemo;
+			sourceTree = "<group>";
+		};
+		CDADEC6C2074CD0200C56AF3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CDADEC6D2074CD4E00C56AF3 /* ImageCellNode.h */,
+				CDADEC6E2074CD4E00C56AF3 /* ImageCellNode.m */,
+				CDADEC702074D19300C56AF3 /* TextCellNode.h */,
+				CDADEC712074D19300C56AF3 /* TextCellNode.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D5B0C4189490A406CCA0B6C0 /* Frameworks */ = {
@@ -220,6 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDADEC722074D19300C56AF3 /* TextCellNode.m in Sources */,
+				CDADEC6B2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m in Sources */,
+				CDADEC6F2074CD4E00C56AF3 /* ImageCellNode.m in Sources */,
 				CDA5096B206E45060062160C /* ViewController.m in Sources */,
 				CDA50976206E45060062160C /* main.m in Sources */,
 				CDA50968206E45060062160C /* AppDelegate.m in Sources */,

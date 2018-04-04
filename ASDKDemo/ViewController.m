@@ -11,8 +11,6 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong)ASTableNode *tableNode;
-
 @end
 
 @implementation ViewController
@@ -32,13 +30,5 @@
 - (void)viewWillLayoutSubviews {
     
 }
-
--(ASTableNode *)tableNode {
-    if (!_tableNode) {
-        _tableNode = [[ASTableNode alloc] init];
-    }
-    return _tableNode;
-}
-
 
 @end
