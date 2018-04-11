@@ -7,7 +7,7 @@
 //
 
 #import "ASTableNodeDemoViewController.h"
-#import "TextCellNode.h"
+#import "ProductCellNode.h"
 
 @interface ASTableNodeDemoViewController ()
 <
@@ -35,6 +35,13 @@ ASTableDelegate
     }
     return self;
 }
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    _tableNode = [ASTableNode new];
+    _tableNode.dataSource = self;
+    _tableNode.delegate = self;
+}
 
 - (void)loadView
 {
@@ -46,11 +53,17 @@ ASTableDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view addSubnode:_tableNode];
+    self.tableNode.frame = self.view.bounds;
     
     for (int i = 0; i < 100; i++) {
-        [self.dataSource addObject:@(i)];
+        ProductModel *productModel = [ProductModel new];
+        productModel.productImageUrl = @"https://ss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/pacific/1147952599.jpg";
+        productModel.productName = @(i).description;
+        [self.dataSource addObject:productModel];
     }
     
+    [self.tableNode reloadData];
     
 }
 
@@ -69,16 +82,17 @@ ASTableDelegate
 }
 */
 #pragma mark - ASTableDataSource methods
-- (NSInteger)numberOfSectionsInTableNode:(ASTableNode *)tableNode {
+
+- (NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;
 }
 
 - (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    id text = self.dataSource[indexPath.item];
+    id obj = self.dataSource[indexPath.item];
     
     ASCellNodeBlock block = ^ASCellNode *() {
-        TextCellNode *cellNode = [[TextCellNode alloc] initWithText:text];
+        ProductCellNode *cellNode = [[ProductCellNode alloc] initWithProduct:obj];
         return cellNode;
     };
     return block;

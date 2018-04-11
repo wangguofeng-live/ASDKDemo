@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A7DF4D72B7DDB3AF7F5E4B3 /* libPods-ASDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65244C40DB75DC010BAF0B4F /* libPods-ASDKDemo.a */; };
+		CD9B757B207B670A00DC7C7E /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B757A207B670A00DC7C7E /* DemoModel.m */; };
 		CDA50968206E45060062160C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA50967206E45060062160C /* AppDelegate.m */; };
 		CDA5096B206E45060062160C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA5096A206E45060062160C /* ViewController.m */; };
 		CDA5096E206E45060062160C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA5096C206E45060062160C /* Main.storyboard */; };
@@ -17,11 +18,15 @@
 		CDADEC6B2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADEC6A2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m */; };
 		CDADEC6F2074CD4E00C56AF3 /* ImageCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADEC6E2074CD4E00C56AF3 /* ImageCellNode.m */; };
 		CDADEC722074D19300C56AF3 /* TextCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADEC712074D19300C56AF3 /* TextCellNode.m */; };
+		CDC4A2D5207A12930092B859 /* ProductCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC4A2D4207A12930092B859 /* ProductCellNode.m */; };
+		CDC4A2D9207A13750092B859 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC4A2D8207A13750092B859 /* ProductModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		25D9D31962CC1C748FD1C1F6 /* Pods-ASDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKDemo/Pods-ASDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		65244C40DB75DC010BAF0B4F /* libPods-ASDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9B7579207B670A00DC7C7E /* DemoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
+		CD9B757A207B670A00DC7C7E /* DemoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
 		CDA50963206E45060062160C /* ASDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA50966206E45060062160C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CDA50967206E45060062160C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,6 +43,10 @@
 		CDADEC6E2074CD4E00C56AF3 /* ImageCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCellNode.m; sourceTree = "<group>"; };
 		CDADEC702074D19300C56AF3 /* TextCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCellNode.h; sourceTree = "<group>"; };
 		CDADEC712074D19300C56AF3 /* TextCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCellNode.m; sourceTree = "<group>"; };
+		CDC4A2D3207A12930092B859 /* ProductCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductCellNode.h; sourceTree = "<group>"; };
+		CDC4A2D4207A12930092B859 /* ProductCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCellNode.m; sourceTree = "<group>"; };
+		CDC4A2D7207A13750092B859 /* ProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductModel.h; sourceTree = "<group>"; };
+		CDC4A2D8207A13750092B859 /* ProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
 		D94883D806923F720D754323 /* Pods-ASDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKDemo/Pods-ASDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +92,7 @@
 		CDA50965206E45060062160C /* ASDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CDC4A2D6207A12A90092B859 /* Model */,
 				CDADEC6C2074CD0200C56AF3 /* Cell */,
 				CDA50966206E45060062160C /* AppDelegate.h */,
 				CDA50967206E45060062160C /* AppDelegate.m */,
@@ -106,8 +116,21 @@
 				CDADEC6E2074CD4E00C56AF3 /* ImageCellNode.m */,
 				CDADEC702074D19300C56AF3 /* TextCellNode.h */,
 				CDADEC712074D19300C56AF3 /* TextCellNode.m */,
+				CDC4A2D3207A12930092B859 /* ProductCellNode.h */,
+				CDC4A2D4207A12930092B859 /* ProductCellNode.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CDC4A2D6207A12A90092B859 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDC4A2D7207A13750092B859 /* ProductModel.h */,
+				CDC4A2D8207A13750092B859 /* ProductModel.m */,
+				CD9B7579207B670A00DC7C7E /* DemoModel.h */,
+				CD9B757A207B670A00DC7C7E /* DemoModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D5B0C4189490A406CCA0B6C0 /* Frameworks */ = {
@@ -243,10 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9B757B207B670A00DC7C7E /* DemoModel.m in Sources */,
 				CDADEC722074D19300C56AF3 /* TextCellNode.m in Sources */,
 				CDADEC6B2074C9FD00C56AF3 /* ASTableNodeDemoViewController.m in Sources */,
 				CDADEC6F2074CD4E00C56AF3 /* ImageCellNode.m in Sources */,
+				CDC4A2D9207A13750092B859 /* ProductModel.m in Sources */,
 				CDA5096B206E45060062160C /* ViewController.m in Sources */,
+				CDC4A2D5207A12930092B859 /* ProductCellNode.m in Sources */,
 				CDA50976206E45060062160C /* main.m in Sources */,
 				CDA50968206E45060062160C /* AppDelegate.m in Sources */,
 			);
